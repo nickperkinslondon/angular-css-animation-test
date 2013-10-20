@@ -1,0 +1,40 @@
+doctype 5
+html(ng-app='test_angular_animation')
+	head
+		link(rel="stylesheet", href="page.css")
+		script(src="http://localhost:35729/livereload.js")
+		script(src="http://code.angularjs.org/snapshot/angular.js")
+		script(src="http://code.angularjs.org/snapshot/angular-animate.js")
+		script(src="page.js")
+
+	body(ng-controller='mycontroller')
+
+		.main
+			
+			h1(ng-if="h1") CSS Test
+
+			h2 Testing CSS Transitions with AngularJS 1.2
+			h3 by Nick Perkins 2013-10-19
+
+			//- h5 The code is on 
+			//- 	a(href="https://github.com/nickperkinslondon/test-angular-animation") Github
+
+			br
+			span mod:
+			input(type='checkbox',ng-model='mod')
+			input(type='checkbox',ng-model='mod2')
+			hr 
+
+			button(ng-click="add()") add
+			button(ng-click="remove()") remove
+
+			hr
+
+			div.container.mod0(
+				ng-class="{mod:mod,mod2:mod2}"
+				)
+				div.thing(
+					ng-repeat="thing in things"
+					ng-click="remove(thing)"
+					)
+					{{ thing }}

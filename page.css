@@ -1,0 +1,127 @@
+body {
+  font-family: Arial;
+  background: #808080;
+}
+.main {
+  width: 700px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #000;
+  box-shadow: 5px 5px 20px #000;
+  padding-left: 30px;
+  border: 1px solid #808080;
+  border-radius: 10px;
+  background: linear-gradient(to left, rgba(255,255,255,0.1), rgba(255,255,255,0.9)), url("yukon_landscape.jpg");
+  background-size: 200%;
+  left: 400px;
+  max-width: 700px;
+  min-height: 100%;
+}
+h1 {
+  color: #fff;
+  background: linear-gradient(to right, #808080, #d3d3d3);
+  padding-left: 9px;
+  padding-top: 4px;
+  padding-bottom: 5px;
+  text-shadow: 3px 3px 5px #000;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px #808080;
+  border: 1px solid #000;
+  max-width: 300px;
+}
+h1:hover {
+  background: linear-gradient(to right, #737373, #d3d3d3);
+  padding-left: 9px;
+  padding-top: 4px;
+  padding-bottom: 5px;
+  text-shadow: 5px 5px 5px #000;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #808080;
+  border: 1px solid #000;
+}
+h1.ng-enter {
+  transition: 500ms ease-out;
+  position: relative;
+  left: 100%;
+  max-height: 0px;
+  opacity: 0;
+}
+h1.ng-enter-active {
+  opacity: 1;
+  left: 0px;
+  max-height: 100px;
+}
+.container {
+  transition: 1s;
+  border: 1px solid #d3d3d3;
+  background: linear-gradient(60deg, #008000, rgba(255,255,255,0));
+  margin: 30px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 20px 20px 40px #808080;
+  min-width: 200px;
+  max-width: 200px;
+}
+.container:hover {
+  transition: 1s linear all;
+  border: 1px solid #d3d3d3;
+  background: linear-gradient(40deg, #008000, rgba(255,255,255,0.5));
+}
+.container.mod0 {
+  transition: 1s ease-in-out;
+  position: relative;
+  left: 0px;
+}
+.container.mod {
+  transition: 1s ease-in-out;
+  position: relative;
+  left: 200px;
+}
+.container.mod2 {
+  transition: 1s ease-in-out;
+  position: relative;
+  left: 400px;
+}
+.thing {
+  opacity: 0.8;
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #d3d3d3;
+  max-width: 100px;
+  background: linear-gradient(to top, #f5deb3, #fff8dc);
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px #808080;
+  cursor: pointer;
+}
+.thing:hover {
+  opacity: 1;
+  background: linear-gradient(to top, #ecc16f, #fff);
+  box-shadow: 4px 4px 6px #808080;
+  text-shadow: 1px 1px 2px #808080;
+}
+.thing.ng-enter {
+  transition: 500ms ease-out all;
+  max-height: 0px;
+  position: relative;
+  left: -100px;
+  opacity: 0;
+}
+.thing.ng-enter-active {
+  max-height: 50px;
+  left: 0px;
+  opacity: 1;
+}
+.thing.ng-leave {
+  background: #efca86;
+  opacity: 0.5;
+  transition: 300ms ease-in;
+  max-height: 50px;
+  position: relative;
+  left: 0px;
+}
+.thing.ng-leave-active {
+  max-height: 1px;
+  left: -100px;
+  opacity: 0;
+}
