@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="test_angular_animation">
+  <head>
+    <link rel="stylesheet" href="page.css">
+    <script src="http://localhost:35729/livereload.js"></script>
+    <script src="http://code.angularjs.org/snapshot/angular.js"></script>
+    <script src="http://code.angularjs.org/snapshot/angular-animate.js"></script>
+    <script src="page.js"></script>
+  </head>
+  <body ng-controller="mycontroller">
+    <div class="main">
+      <h1 ng-if="h1">CSS Test</h1>
+      <h2>Testing CSS Transitions with AngularJS 1.2</h2>
+      <h3>by Nick Perkins 2013-10-19</h3>
+      <h5>The code is on <a href="https://github.com/nickperkinslondon/angular-css-animation-test">Github</a></h5><br><span>mod:</span>
+      <input type="checkbox" ng-model="mod">
+      <input type="checkbox" ng-model="mod2">
+      <hr>
+      <button ng-click="add()">add</button>
+      <button ng-click="remove()">remove</button>
+      <hr>
+      <div ng-class="{mod:mod,mod2:mod2}" class="container mod0">
+        <div ng-repeat="thing in things" ng-click="remove(thing)" class="thing">{{ thing }}</div>
+      </div>
+    </div>
+  </body>
+</html>
